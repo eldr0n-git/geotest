@@ -3,7 +3,7 @@
 let mylat, mylong;
 
 const myPosition = () => {
-  navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition((position) => {
     let mylat = position.coords.latitude;
     let mylong = position.coords.longitude;
     console.log(`${mylat}, ${mylong}`);
@@ -14,6 +14,4 @@ const myPosition = () => {
       });
   });
 };
-const getDataPosition = (mylat, mylong) => {};
-const btnHandler = document.getElementById("getDataRun");
-btnHandler?.addEventListener("click", myPosition());
+document.getElementById("getDataRun").addEventListener("click", myPosition);
