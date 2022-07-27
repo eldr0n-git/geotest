@@ -16,4 +16,4 @@ const myPosition = () => {
 };
 const getDataPosition = (mylat, mylong) => {};
 const btnHandler = document.getElementById("getDataRun");
-btnHandler ? btnHandler.addEventListener("click", myPosition()) : console.log("err");
+btnHandler?.addEventListener("click", myPosition());
